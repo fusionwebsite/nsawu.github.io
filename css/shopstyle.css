@@ -120,6 +120,9 @@
 @media (max-width:600px) {
 	.cards {
 		display: inline-block;
+		justify-content: center;
+		align-items: center;
+		margin-bottom:20px;
 	}
 }
 
