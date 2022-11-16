@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>nsaw.u</title>
+   
+   <link rel="stylesheet" href="css/swiper.min.css" />
+   
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="css/fontawesome/css/all.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+   
+   <!-- <link rel="stylesheet" href="css/admin_style.css"> -->
+
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+   <header class="header">
+
+      <section class="flex">
+   
+         <a href="index.html" class="logo">nsaw.u<span></span></a>
+   
+         <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="orders.html">Orders</a>
+            <a href="contact.html">Contact Us</a>
+         </nav>
+   
+         <div class="icons">
+            
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <!-- <a href="search_page.php"><i class="fas fa-search"></i></a> -->
+   
+            <a href="wishlist.html">
+                  <i class="fas fa-heart"></i>
+                  <span>0</span>
+            </a>
+            <a href="cart.html">
+               <i class="fas fa-shopping-cart"></i>
+               <span>0</span>
+            </a>
+   
+            <div id="user-btn" class="fas fa-user" style="color:#000000"></div>
+         </div>
+   
+         <div class="profile">
+            
+            
+            <p>Please Login or Register first!</p>
+            <div class="flex-btn">
+               <a href="user_register.html" class="option-btn">Register</a>
+               <a href="user_login.html" class="option-btn">Login</a>
+            </div>
+      
+            
+         </div>
+   
+      </section>
+   
+   </header>
+
+
+<section class="products shopping-cart">
+
+   <h3 class="heading">shopping cart</h3>
+
+   <div class="box-container">
+
+   
+   <form action="" method="post" class="box">
+      <input type="hidden" name="cart_id" value="<?= $fetch_cart['id']; ?>">
+      
+      <img src="uploaded_img/3.jpg" alt="">
+      <div class="flex">
+          <div style="font-size:17px;font-weight:500;color:#00000070;">Name - </div>
+          <div style="font-size: 2rem;color:#000;font-weight: 500;">Bag</div>
+      </div>
+      <div class="flex">
+          <div style="font-size:17px;font-weight:500;color:#00000070;">Price - </div>
+          <div class="price" style="color:#000">$ 20</div>
+      </div>
+      <div class="flex">
+          <div style="font-size:17px;font-weight:500;color:#00000070;margin-top:4px">Quantity - </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="<?= $fetch_cart['quantity']; ?>" style="background-color:#fff;border:2px solid #000">
+      </div>
+      
+      
+
+      <div style="font-size:17px;font-weight:500;color:#00000070;margin-bottom:6px">Choose Quantity & then update total</div>
+      <div class="flex">
+         
+         <input type="submit" value="Update Total"  class="delete" name="update_qty">
+      </div>
+      <br>
+      
+      <div class="price">Total : <span>$ 0</span> </div>
+      <br>
+      <div class="flex">
+         <input type="submit" value="delete" onclick="return confirm('delete this from cart?');" class="delete-btn" name="delete">
+
+         <a href="quick_view.html">
+            <input value="View" class="delete-btn">
+         </a>
+      </div>
+
+      
+      
+   </form>
+   
+   </div>
+
+   <div class="cart-total">
+      <p>Grand Total : <span>$ 0</span></p>
+      <a href="shop.html" class="option-btn">continue shopping</a>
+      <a href="cart.php?delete_all" class="delete-btn" onclick="return confirm('delete all from cart?');">delete all item</a>
+      <a href="checkout.html" class="btn" style="background-color:#000;color:#fff">proceed to checkout</a>
+   </div>
+
+</section>
+ 
+<footer class="footer">
+
+   <section class="grid">
+
+      <div class="box">
+         <h3>quick links</h3>
+         <a href="index.html"> <i class="fas fa-angle-right"></i> Home</a>
+         <a href="about.html"> <i class="fas fa-angle-right"></i> About</a>
+         <a href="shop.html"> <i class="fas fa-angle-right"></i> Shop</a>
+         <a href="contact.html"> <i class="fas fa-angle-right"></i> Contact</a>
+      </div>
+
+      <div class="box">
+         <h3>extra links</h3>
+         <a href="user_login.html"> <i class="fas fa-angle-right"></i> Login</a>
+         <a href="user_register.html"> <i class="fas fa-angle-right"></i> Register</a>
+         <a href="cart.html"> <i class="fas fa-angle-right"></i> Cart</a>
+         <a href="orders.html"> <i class="fas fa-angle-right"></i> Orders</a>
+      </div>
+
+      <div class="box">
+         <h3>contact us</h3>
+         <a href="tel:"><i class="fas fa-phone"></i> +256 771 234567</a>
+         <a href="tel:"><i class="fas fa-phone"></i> +256 771 234567</a>
+         <a href="mailto:*****@gmail.com"><i class="fas fa-envelope"></i> nsawu@gmail.com</a>
+         <a href="https://www.google.com/location here"><i class="fas fa-map-marker-alt"></i> MOTIV, Old Portbell Road.</a>
+      </div>
+
+      <div class="box">
+         <h3>follow us</h3>
+         <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+         <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+         <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+         <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+      </div>
+
+   </section>
+
+   <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span>David Junior Okello</span> | All Rights Reserved!</div>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

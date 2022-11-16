@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>nsaw.u</title>
+   
+   <link rel="stylesheet" href="css/swiper.min.css" />
+   
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="css/fontawesome/css/all.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+   
+   <!-- <link rel="stylesheet" href="css/admin_style.css"> -->
+
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+   <header class="header">
+
+      <section class="flex">
+   
+         <a href="index.html" class="logo">nsaw.u<span></span></a>
+   
+         <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="orders.html">Orders</a>
+            <a href="contact.html">Contact Us</a>
+         </nav>
+   
+         <div class="icons">
+            
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <!-- <a href="search_page.php"><i class="fas fa-search"></i></a> -->
+   
+            <a href="wishlist.html">
+                  <i class="fas fa-heart"></i>
+                  <span>0</span>
+            </a>
+            <a href="cart.html">
+               <i class="fas fa-shopping-cart"></i>
+               <span>0</span>
+            </a>
+   
+            <div id="user-btn" class="fas fa-user" style="color:#000000"></div>
+         </div>
+   
+         <div class="profile">
+            
+            
+            <p>Please Login or Register first!</p>
+            <div class="flex-btn">
+               <a href="user_register.html" class="option-btn">Register</a>
+               <a href="user_login.html" class="option-btn">Login</a>
+            </div>
+      
+            
+         </div>
+   
+      </section>
+   
+   </header>
+
+<section class="checkout-orders">
+
+   <form action="" method="POST">
+
+   <h3>Place Your Orders</h3>
+
+      <div class="display-orders">
+      
+         <div style="display: inline-block;">
+            <img src="uploaded_img/3.jpg" alt="" style="height:100px;margin:10px">
+            
+            <div>
+               <h4 style="color:#000;font-size:17px;font-weight:600">Bag <span>1</span></h4>
+               <h4 style="color:#000;font-size:17px;font-weight:600;margin-bottom:20px">$ 20</h4>
+               </div>         
+            
+         </div>
+      
+         <input type="hidden" name="total_products" value="<?= $total_products; ?>">
+         <input type="hidden" name="total_price" value="<?= $grand_total; ?>" value="">
+         <div class="grand-total">Grand Total : <span>$ 20</span></div>
+      </div>
+      <hr>
+
+      <h3 style="margin-top:30px;border-top:2px solid #000">place your orders</h3>
+
+      <div class="flex">
+         <div class="inputBox">
+            <span>Name :</span>
+            <input type="text" name="name" placeholder="Enter your name" class="box" maxlength="20" required>
+         </div>
+         <div class="inputBox">
+            <span>Telephone Number :</span>
+            <input type="number" name="number" placeholder="Enter your number" class="box" min="0" max="9999999999" onkeypress="if(this.value.length == 10) return false;" required>
+         </div>
+         <div class="inputBox">
+            <span>Email :</span>
+            <input type="email" name="email" placeholder="Enter your email" class="box" maxlength="50" required>
+         </div>
+         <div class="inputBox">
+            <span>Payment Method :</span>
+            <select name="method" class="box" required>
+               <option value="cash on delivery">cash on delivery</option>
+               <option value="credit card">credit card</option>
+            </select>
+         </div>
+         <!-- <div class="inputBox">
+            <span>Address line 01 :</span>
+            <input type="text" name="flat" placeholder="e.g. Street Name " class="box" maxlength="50" required>
+         </div> -->
+         <div class="inputBox">
+            <span>Address :</span>
+            <input type="text" name="street" placeholder="e.g. street Name" class="box" maxlength="50" required>
+         </div>
+         <div class="inputBox">
+            <span>City :</span>
+            <input type="text" name="city" placeholder="e.g. Gulu" class="box" maxlength="50" required>
+         </div>
+         <div class="inputBox">
+            <span>Municipal :</span>
+            <input type="text" name="state" placeholder="e.g. Mukono Municipal" class="box" maxlength="50" required>
+         </div>
+         <div class="inputBox">
+            <span>Country :</span>
+            <input type="text" name="country" placeholder="e.g. Uganda" class="box" maxlength="50" required>
+         </div>
+         <!-- <div class="inputBox">
+            <span>Pin Code :</span>
+            <input type="number" min="0" name="pin_code" placeholder="e.g. 123456" min="0" max="999999" onkeypress="if(this.value.length == 6) return false;" class="box" required>
+         </div> -->
+      </div>
+
+      <input type="submit" name="order" class="btn <?= ($grand_total > 1)?'':'enabled'; ?>" value="place order" style="background-color:#000;color:#fff;font-weight:600">
+
+   </form>
+
+</section>
+
+<footer class="footer">
+
+   <section class="grid">
+
+      <div class="box">
+         <h3>quick links</h3>
+         <a href="index.html"> <i class="fas fa-angle-right"></i> Home</a>
+         <a href="about.html"> <i class="fas fa-angle-right"></i> About</a>
+         <a href="shop.html"> <i class="fas fa-angle-right"></i> Shop</a>
+         <a href="contact.html"> <i class="fas fa-angle-right"></i> Contact</a>
+      </div>
+
+      <div class="box">
+         <h3>extra links</h3>
+         <a href="user_login.html"> <i class="fas fa-angle-right"></i> Login</a>
+         <a href="user_register.html"> <i class="fas fa-angle-right"></i> Register</a>
+         <a href="cart.html"> <i class="fas fa-angle-right"></i> Cart</a>
+         <a href="orders.html"> <i class="fas fa-angle-right"></i> Orders</a>
+      </div>
+
+      <div class="box">
+         <h3>contact us</h3>
+         <a href="tel:"><i class="fas fa-phone"></i> +256 771 234567</a>
+         <a href="tel:"><i class="fas fa-phone"></i> +256 771 234567</a>
+         <a href="mailto:*****@gmail.com"><i class="fas fa-envelope"></i> nsawu@gmail.com</a>
+         <a href="https://www.google.com/location here"><i class="fas fa-map-marker-alt"></i> MOTIV, Old Portbell Road.</a>
+      </div>
+
+      <div class="box">
+         <h3>follow us</h3>
+         <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+         <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+         <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+         <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+      </div>
+
+   </section>
+
+   <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span>David Junior Okello</span> | All Rights Reserved!</div>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
