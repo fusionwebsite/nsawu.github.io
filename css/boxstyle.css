@@ -224,7 +224,7 @@
   }
 
 	
-  @media (width<991px){
+  @media (max-width:600px){
 	.gallery {
 	    display:inline-block; 
 	}
